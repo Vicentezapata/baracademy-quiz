@@ -1,0 +1,589 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Test de Recetas Bar Academy</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <img  class="img-fluid w-80" src="./resources/images/banner_barAcademy.jpg">
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarToggler">
+          <!-- <a class="navbar-brand" href="#">Hidden brand</a> -->
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Recetas <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Modulos</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    <div class="col-12 justify-content-center text-center">
+    <img  class="img-fluid w-80" src="./resources/images/definitions_banner.png">
+    </div>
+    <br>
+    <form>
+        <!-- CONTENEDOR DE RECETAS -->
+        <div id="recipes">
+        </div>
+
+        <!-- BOTON ENVIAR -->
+        <div class="container text-center mt-4">
+            <button type="button" class="btn btn-outline-success" onclick="enviarRespuesta()"><i
+                    class="fa fa-paper-plane"></i> Validar</button>
+        </div>
+        <br>
+    </form>
+
+</body>
+<style>
+    .btn-outline-primary {
+        color: #950A42;
+        border-color: #950A42;
+    }
+    .btn-outline-primary:hover {
+    color: #fff;
+    background-color: #950A42;
+    border-color: #950A42;
+}
+</style>
+<script>
+    var out = {
+        summaryRecipes:[],
+        countRecipesCorrect:0,
+        countRecipesIncorrect:0,
+        totalRecipes:0
+    }
+    var arrayNameRecipes = []
+    var dombtnDelete =
+        '<div class="col-1 m-1 p-0">' +
+        '<div class="form-group">' +
+        '<button type="button" class="btn btn-danger" onclick="deleteRow(this)">' +
+        '<i class="fa fa-trash"></i>' +
+        '</button>' +
+        '</div>' +
+        '</div>'
+    var domSelect = '<div class="col-5 m-1 p-0">' +
+        '<div class="form-group">' +
+        '<select name="xNAMEx" class="form-control">' +
+        '</select>' +
+        '</div>' +
+        '</div>'
+
+    var divTwoSelect = '<div class="row">' + domSelect + domSelect + dombtnDelete + '</div>'
+    var divOneSelect = '<div class="row">' + domSelect + dombtnDelete + '</div>'
+    var medidas,bases,mixers,modificadores,aditivos,preparaciones,cristalerias,garnish 
+
+    $(document).ready(function () {
+        $.getJSON("recipes.json", function (data) {
+            var recipes = data.recipes
+            medidas = data.medidas 
+            bases = data.bases 
+            mixers = data.mixers 
+            modificadores = data.modificadores 
+            aditivos = data.aditivos 
+            preparaciones = data.preparaciones 
+            cristalerias = data.cristalerias 
+            garnish = data.garnish 
+            for(index in data.recipes){
+                $("#recipes").append(generateDivs(recipes[index].id,recipes[index].name,recipes[index].img));
+            }
+        }).fail(function () {
+            console.log("An error has occurred.");
+        });
+    });
+    function generateDivs(id,name,img) {
+        var domRecipe = '<div class="container card p-4 col-xl-11 col-lg-11 col-md-11 col-sm-11">' +
+        '<h1 class="text-center">'+name+'</h1>' +
+        '<div class="form-group" id="'+id+'">' +
+        '<div class="row align-items-center">' +
+        //IMAGEN
+        '<div class="col-12 col-sm-12 col-md-4 col-lg-5 col-xl-4  d-flex justify-content-center">' +
+        '<div class="col-8 col-sm-8 col-md-12 col-lg-12 col-xl-12 justify-content-center text-center">' +
+        '<img class="img-fluid" id="img_'+id+'" src="./resources/images/cocktail_quiz.png" alt="">' +
+        '<button type="button" id="img_'+id+'_btn" class="btn btn-outline-dark" onclick="changeImg(\'#img_'+id+'\',\''+img+'\')"><i class="fa fa-eye"></i></button>' +
+        '</div>' +
+        '</div>' +
+        //RECETA
+        '<div class="col-12 col-sm-12 col-md-8 col-lg-7 col-xl-8" id="'+id+'__input">' +
+        '<label for="formGroupExampleInput">Receta</label>' +
+        ' <div class="col" id="'+id+'__ingredients">' +
+        '<label for="formGroupExampleInput">Ingredientes:</label>' +
+        '</div>' +
+        '<div class="col" id="'+id+'__technique">' +
+        '<label for="formGroupExampleInput">Preparacion:</label>' +
+        '</div>' +
+        '<div class="col" id="'+id+'__glass">' +
+        '<label for="formGroupExampleInput">Cristaleria:</label>' +
+        '</div>' +
+        '<div class="col" id="'+id+'__garnish">' +
+        '<label for="formGroupExampleInput">Garnish:</label>' +
+        '</div>' +
+        '</div>' +
+        '</div>' +
+        '</div>' +
+        //BOTONES
+        '<div class="row">' +
+        '<div class="col-6 col-sm-4 col-md-3 col-lg-2 col-xl-2">' +
+        '<button type="button" class="btn btn-outline-primary w-100" onclick="addBase(\'#'+id+'__ingredients\')"><i class="fa fa-plus"></i> Base</button>' +
+        '</div>' +
+        '<div class="col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2">' +
+        '<button type="button" class="btn btn-outline-primary w-100" onclick="addModificador(\'#'+id+'__ingredients\')"><i class="fa fa-plus"></i> Modificador</button>' +
+        '</div>' +
+        '<div class="col-6 col-sm-4 col-md-3 col-lg-2 col-xl-2">' +
+        '<button type="button" class="btn btn-outline-primary w-100" onclick="addMixer(\'#'+id+'__ingredients\')"><i class="fa fa-plus"></i> Mixer</button>' +
+        '</div>' +
+        '<div class="col-6 col-sm-4 col-md-3 col-lg-2 col-xl-2">' +
+        '<button type="button" class="btn btn-outline-primary w-100" onclick="addAditivos(\'#'+id+'__ingredients\')"><i class="fa fa-plus"></i> Aditivos</button>' +
+        '</div>' +
+        '<div class="col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2">' +
+        '<button type="button" class="btn btn-outline-primary w-100" onclick="addPreparacion(\'#'+id+'__technique\')"><i class="fa fa-plus"></i> Preparacion</button>' +
+        '</div>' +
+        '<div class="col-6 col-sm-4 col-md-3 col-lg-2 col-xl-2">' +
+        '<button type="button" class="btn btn-outline-primary w-100" onclick="addCristaleria(\'#'+id+'__glass\')"><i class="fa fa-plus"></i> Cristaleria</button>' +
+        '</div>' +
+        '<div class="col-6 col-sm-4 col-md-3 col-lg-2 col-xl-2">' +
+        '<button type="button" class="btn btn-outline-primary w-100" onclick="addGarnish(\'#'+id+'__garnish\')"><i class="fa fa-plus"></i> Garnish</button>' +
+        '</div>' +
+        '</div>' +
+        '</div >'+
+        '<br>'
+        return domRecipe
+    }
+    function addBase(recipe) {
+        var name_recipe = recipe.replace("#","")
+        var divRecipe = $(recipe);
+        var name_recipe = recipe.replace("#","")
+        id_name = $(recipe + " .row").length + 1
+        divRecipe.append(divTwoSelect.replaceAll("xNAMEx",name_recipe+"-"+id_name));
+        row = $(recipe + " .row").last()
+        selects_form = row.find('select').get();
+        //AGREGAMOS LAS MEDIDAS
+        $.each(medidas, function (index) {
+            selects_form[0].append(new Option(medidas[index], medidas[index]));
+        });
+        //AGREGAMOS LAS BASES
+        $.each(bases, function (index) {
+            selects_form[1].append(new Option(bases[index], bases[index]));
+        });
+    }
+    function addMixer(recipe) {
+        var divRecipe = $(recipe);
+        var name_recipe = recipe.replace("#","")
+        id_name = $(recipe + " .row").length + 1
+        divRecipe.append(divTwoSelect.replaceAll("xNAMEx",name_recipe+"-"+id_name));
+        row = $(recipe + " .row").last()
+        selects_form = row.find('select').get();
+        //AGREGAMOS LAS MEDIDAS
+        $.each(medidas, function (index) {
+            selects_form[0].append(new Option(medidas[index], medidas[index]));
+        });
+        //AGREGAMOS LAS MODIFICADORES
+        $.each(mixers, function (index) {
+            selects_form[1].append(new Option(mixers[index], mixers[index]));
+        });
+    }
+    function addModificador(recipe) {
+        var divRecipe = $(recipe);
+        var name_recipe = recipe.replace("#","")
+        id_name = $(recipe + " .row").length + 1
+        divRecipe.append(divTwoSelect.replaceAll("xNAMEx",name_recipe+"-"+id_name));
+        row = $(recipe + " .row").last()
+        selects_form = row.find('select').get();
+        //AGREGAMOS LAS MEDIDAS
+        $.each(medidas, function (index) {
+            selects_form[0].append(new Option(medidas[index], medidas[index]));
+        });
+        //AGREGAMOS LAS MODIFICADORES
+        $.each(modificadores, function (index) {
+            selects_form[1].append(new Option(modificadores[index], modificadores[index]));
+        });
+    }
+    function addAditivos(recipe) {
+        var divRecipe = $(recipe);
+        var name_recipe = recipe.replace("#","")
+        id_name = $(recipe + " .row").length + 1
+        divRecipe.append(divTwoSelect.replaceAll("xNAMEx",name_recipe+"-"+id_name));
+        row = $(recipe + " .row").last()
+        selects_form = row.find('select').get();
+        //AGREGAMOS LAS MEDIDAS
+        $.each(medidas, function (index) {
+            selects_form[0].append(new Option(medidas[index], medidas[index]));
+        });
+        //AGREGAMOS LAS MODIFICADORES
+        $.each(aditivos, function (index) {
+            selects_form[1].append(new Option(aditivos[index], aditivos[index]));
+        });
+    }
+
+    function addPreparacion(recipe) {
+        var divRecipe = $(recipe);
+        var name_recipe = recipe.replace("#","")
+        id_name = $(recipe + " .row").length + 1
+        divRecipe.append(divOneSelect.replaceAll("xNAMEx",name_recipe+"-"+id_name));
+        row = $(recipe + " .row").last()
+        selects_form = row.find('select').get();
+        //AGREGAMOS LAS MODIFICADORES
+        $.each(preparaciones, function (index) {
+            selects_form[0].append(new Option(preparaciones[index], preparaciones[index]));
+        });
+    }
+    function addCristaleria(recipe) {
+        var divRecipe = $(recipe);
+        var name_recipe = recipe.replace("#","")
+        id_name = $(recipe + " .row").length + 1
+        divRecipe.append(divOneSelect.replaceAll("xNAMEx",name_recipe+"-"+id_name));
+        row = $(recipe + " .row").last()
+        selects_form = row.find('select').get();
+        //AGREGAMOS LAS MODIFICADORES
+        $.each(cristalerias, function (index) {
+            selects_form[0].append(new Option(cristalerias[index], cristalerias[index]));
+        });
+    }
+
+    function addGarnish(recipe) {
+        var divRecipe = $(recipe);
+        var name_recipe = recipe.replace("#","")
+        id_name = $(recipe + " .row").length + 1
+        divRecipe.append(divOneSelect.replaceAll("xNAMEx",name_recipe+"-"+id_name));
+        row = $(recipe + " .row").last()
+        selects_form = row.find('select').get();
+        //AGREGAMOS LAS MODIFICADORES
+        $.each(garnish, function (index) {
+            selects_form[0].append(new Option(garnish[index], garnish[index]));
+        });
+    }
+    function deleteRow(row) {
+        $(row).closest('.row').remove()
+    }
+
+    function changeImg(image, img_change) {
+        img_form = $(image);
+        $(image).attr('src', '/resources/images/recipes/' + img_change);
+        //$(image+'_btn i').attr('class','fa fa-eye-slash');
+    }
+    function enviarRespuesta() {
+        var returning = '';
+        //INFORMACION OBTENIDA
+        var data = $( "form" ).serializeArray();
+        //console.log(data)
+        data = procesarDatos(data)
+        
+        //MODALS
+        const swalWithBootstrapButtons = Swal.mixin({
+            customClass: {
+                confirmButton: 'btn btn-success',
+                cancelButton: 'btn btn-danger'
+            },
+            buttonsStyling: false
+        })
+
+        swalWithBootstrapButtons.fire({
+            title: '¿Deseas enviar tus respuesas?',
+            text: "No podras revertir esta accion.",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Si, enviar!',
+            cancelButtonText: 'No, cancelar!',
+            reverseButtons: true
+        }).then((result) => {
+            if (result.isConfirmed) {
+                var summary = validateAnswer(data)
+                console.log(summary)
+            }
+        })
+    }
+    function procesarDatos(arreglo){
+        var out = []
+        var pivotRecipe = ""
+        var pivotAtribute = ""
+        var pivotValue = ""
+        var keyRecipes = []
+        //OBTENEMOS LOS ID DE LAS RECETAS
+        for (element in arreglo){
+            keyRecipes.push(arreglo[element].name.split("__")[0])
+        }
+        var keyRecipes = keyRecipes.filter(function(element,index,self){
+            return index === self.indexOf(element); 
+        });
+        //console.log(keyRecipes)
+        for (recipe in keyRecipes){
+            var cocktail = {}
+            var recipeOut = {}
+            var valKeyRecipe = keyRecipes[recipe]
+            //console.log(valKeyRecipe)
+            for (element in arreglo){
+                var input = arreglo[element]
+                var atribute = input.name
+                var value = input.value
+                var recipe = arreglo[element]
+
+                if(input.name.includes(valKeyRecipe)){
+                    if(atribute==pivotAtribute){
+                        recipeOut[atribute] += " "+ value
+                    }else{
+                        pivotAtribute = atribute
+                        pivotValue = value
+                        recipeOut[atribute] = value
+                    }
+                    
+                }
+                //console.log(input.name)
+                //console.log(recipeOut)
+            }
+            cocktail.id = valKeyRecipe
+            cocktail.recipe = recipeOut
+            //console.log(cocktail)
+            out.push(cocktail)
+        }
+        //console.log(out)
+        return out
+    }
+    function validateAnswer(answers){
+        out.countRecipesCorrect = 0
+        out.countRecipesIncorrect = 0
+        out.summaryRecipes = []
+        arrayNameRecipes = []
+        out.totalRecipes=0
+        var recipes
+        $.getJSON("recipes.json", function (data) {
+            recipes = data.recipes
+            //CONTAMOS LA CANTIDAD DE RECETAS
+            if(out.totalRecipes==0){
+                for(index in recipes){
+                    arrayNameRecipes.push(recipes[index].name)
+                    out.totalRecipes++
+                }
+            }
+            console.log(arrayNameRecipes)
+
+            //console.log(recipes)
+            for(i in answers){
+                var objSummary = {
+                    id:answers[i].id,errors:[],
+                    valid:true,
+                    name:"",
+                    countIncorrect:0,
+                    countCorrect:0,
+                    points: 0,
+                    pointsIngs:0, //REPRESENTA A LOS PUNTOS TOTALES DE INGREDIENTES DE LA RECETA
+                    pointsGlass:0, //REPRESENTA A LOS PUNTOS TOTALES DE CRISTALERIA DE LA RECETA
+                    pointsTech:0, //REPRESENTA A LOS PUNTOS TOTALES DE PREPARACION DE LA RECETA
+                    pointsGarnish:0, //REPRESENTA A LOS PUNTOS TOTALES DE GARNISH DE LA RECETA
+                    pointsAnsIngs:0, //REPRESENTA A LOS PUNTOS OBTENIDOS DE INGREDIENTES DE LA RECETA
+                    pointsAnsGlass:0, //REPRESENTA A LOS PUNTOS OBTENIDOS DE CRISTALERIA DE LA RECETA
+                    pointsAnsTech:0, //REPRESENTA A LOS PUNTOS OBTENIDOS DE PREPARACION DE LA RECETA
+                    pointsAnsGarnish:0, //REPRESENTA A LOS PUNTOS OBTENIDOS DE GARNISH DE LA RECETA
+                    glassAns : [],
+                    garnishAns : [],
+                    ingsAns : [],
+                    techAns : [],
+                    comment : ""
+                }
+                var keyNames = Object.keys(answers[i].recipe);
+                //SERPARAMOS LA RECETA POR TIPO
+                for(h in keyNames){
+                    //console.log(keyNames[h])
+                    if(keyNames[h].includes("garnish")){
+                        objSummary.garnishAns.push(answers[i].recipe[keyNames[h]])
+                    }
+                    else if(keyNames[h].includes("glass")){
+                        objSummary.glassAns.push(answers[i].recipe[keyNames[h]])
+                    }
+                    else if(keyNames[h].includes("ingredients")){
+                        objSummary.ingsAns.push(answers[i].recipe[keyNames[h]])
+                    }
+                    else if(keyNames[h].includes("technique")){
+                        objSummary.techAns.push(answers[i].recipe[keyNames[h]])
+                    }
+                    
+                }
+                //VALIDAMOS LA RECETA OBLIGATORIA
+                if(objSummary.glassAns.length == 0){
+                    objSummary.errors.push("Debes ingresar al menos una cristaleria")
+                    objSummary.countIncorrect++
+                }
+                if(objSummary.garnishAns.length == 0){
+                    objSummary.errors.push("Debes ingresar al menos un garnish")
+                    objSummary.countIncorrect++
+                }
+                if(objSummary.ingsAns.length == 0){
+                    objSummary.errors.push("Debes ingresar al menos un ingrediente")
+                    objSummary.countIncorrect++
+                }
+                if(objSummary.techAns.length == 0){
+                    objSummary.errors.push("Debes ingresar al menos una cristaleria")
+                    objSummary.countIncorrect++
+                }
+                //console.log("objSummary")
+                //console.log(objSummary)
+                for(j in recipes){
+                    if(recipes[j].id == answers[i].id){
+                        /*console.log(recipes[j].id)
+                        console.log(answers[i].id)*/
+                        //INGRESAMOS EL NOMBRE DEL COCTEL
+                        objSummary.name = recipes[j].name
+                        //VALIDAMOS CRISTALERIA
+                        var glassReci = recipes[j].glass
+                        objSummary.pointsGlass = glassReci.length
+                        for (const element of objSummary.glassAns) {
+                            if(glassReci.includes(element)){
+                                objSummary.countCorrect++
+                                objSummary.pointsAnsGlass++
+                            }else{
+                                objSummary.errors.push("Cristaleria incorrecta")
+                            }
+                        }
+                        //VALIDAMOS INGREDIENTES
+                        var ingredientsReci = recipes[j].ingredients
+                        objSummary.pointsIngs = ingredientsReci.length
+                        for (const element of objSummary.ingsAns) {
+                            if(ingredientsReci.includes(element)){
+                                objSummary.countCorrect++
+                                objSummary.pointsAnsIngs++
+                            }else{
+                                objSummary.errors.push("Ingredientes incorrectos")
+                                objSummary.countIncorrect++
+                            }
+                        }
+                        //VALIDAMOS TECNICA
+                        var techniqueReci = recipes[j].technique
+                        objSummary.pointsTech = techniqueReci.length
+                        for (const element of objSummary.techAns) {
+                            if(techniqueReci.includes(element)){
+                                objSummary.countCorrect++
+                                objSummary.pointsAnsTech++
+                            }else{
+                                objSummary.errors.push("Preparacion incorrecta")
+                                objSummary.countIncorrect++
+                            }
+                        }
+                        //VALIDAMOS GARNISH
+                        var garnishReci = recipes[j].garnish
+                        objSummary.pointsGarnish = garnishReci.length
+                        for (const element of objSummary.garnishAns) {
+                            if(garnishReci.includes(element)){
+                                objSummary.countCorrect++
+                                objSummary.pointsAnsGarnish++
+                            }else{
+                                objSummary.errors.push("Garnish incorrecto")
+                                objSummary.countIncorrect++
+                            }
+                        }
+                        //VALIDAMOS EXACTITUD DE LA RECETA
+                        if(objSummary.pointsAnsIngs == objSummary.pointsIngs && objSummary.pointsAnsGlass == objSummary.pointsGlass && objSummary.pointsAnsTech==objSummary.pointsTech && objSummary.pointsAnsGarnish == objSummary.pointsGarnish){
+                            objSummary.comment = "La receta ingresada tiene una exactitud del 100%"
+                            objSummary.valid = true
+                            out.countRecipesCorrect++
+                        }
+                        //VALIDAMOS REQUISITOS MINIMO DE LA RECETA (ING 100%, GARNISH>0, TECNICA>0, CRISTAL>0)
+                        else if(objSummary.pointsAnsIngs == objSummary.pointsIngs && objSummary.pointsAnsGlass >0 && objSummary.pointsAnsTech >0 && objSummary.pointsAnsGarnish>0){
+                            objSummary.valid = true
+                            out.countRecipesCorrect++
+                        }
+                        else{
+                            objSummary.valid = false
+                            out.countRecipesIncorrect++
+                        }
+                        console.log("objSummary")
+                        console.log(objSummary)
+                        out.summaryRecipes.push(objSummary)
+                        //ELIMINAMOS NOMBRES EXISTENTE DEL LISTADO DE NOMBRES DE COCTELES
+                        var l = 0;
+                        while (l < arrayNameRecipes.length) {
+                            if (arrayNameRecipes[l] === recipes[j].name) {
+                                arrayNameRecipes.splice(l, 1);
+                            } else {
+                                ++l;
+                            }
+                        }
+                    }
+                }
+            }
+            console.log("out")
+            console.log(out)
+            console.log(arrayNameRecipes)
+            //MOSTRAMOS MODALS
+            if(out.countRecipesCorrect<out.totalRecipes){
+                Swal.fire({
+                    title: 'La cantidad de respuestas correcta son '+out.countRecipesCorrect+' de '+out.totalRecipes,
+                    icon: 'error',
+                    html:
+                        '<button type="button" class="btn btn-outline-secondary" onclick="showDetail()"> Detalle</button>' ,
+                    showCloseButton: true,
+                    showCancelButton: false,
+                    focusConfirm: false,
+                    confirmButtonText:
+                        'Cerrar',
+                })
+            }
+            else if(out.countRecipesCorrect==out.totalRecipes){
+                Swal.fire(
+                'Felicidades tienes todas las respuestas correctas',
+                'Detalle.',
+                'success'
+                )
+            }
+
+        }).fail(function () {
+            console.log("An error has occurred.");
+        });
+        return out
+    }
+
+    function showDetail(){
+        var detail = ''
+        detail+='</br><h3>Recetas ingresadas:</h3>'
+        if(out.summaryRecipes.length==0){
+            detail+='Ninguna receta fue contestada'
+        }
+        for (const element of out.summaryRecipes) {
+            console.log(element)
+            detail+='<h4>'+element.name+'</h4>'
+            detail+=element.errors.join('</br>')
+
+        }
+        detail+='</br><h3>Recetas faltantes:</h3>'
+        detail+=arrayNameRecipes.join('</br>')
+        console.log(detail)
+        Swal.fire({
+            title: 'Detalle',
+            icon: 'info',
+            html:
+            detail ,
+            showCloseButton: true,
+            showCancelButton: false,
+            focusConfirm: false,
+            confirmButtonText:
+                'Cerrar',
+        })
+
+    }
+
+</script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</html>

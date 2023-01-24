@@ -1,0 +1,1017 @@
+{
+    "recipes": [
+        {
+            "id": "p_sour",
+            "name": "PISCO SOUR (Chileno)",
+            "type": "All Day Cocktail",
+            "ingredients": [
+                "2 oz Pisco",
+                "3/4 oz Jugo de limón",
+                "3/4 oz Jarabe de goma"
+            ],
+            "ingredients_Op": [
+                "1 Cucharita de bar de Albumina"
+            ],
+            "glass": [
+                "Copa Flauta",
+                "Vaso Rock"
+            ],
+            "technique": [
+                "Batido"
+            ],
+            "method": "Agregar todos los ingredientes en una coctelera y batir enérgicamente durante 15 segundos. Servir en la copa flauta. Rociar 3 gotas de amargo de Angostura en la parte superior",
+            "garnish": ["N/A"],
+            "img": "p_sour.png"
+        },
+        {
+            "id": "daiqui",
+            "name": "DAIQUIRI",
+            "type": "Pre Dinner",
+            "ingredients": [
+                "1 1/2 oz Ron blanco",
+                "3/4 oz Jugo de limón",
+                "3/4 oz Jarabe de goma"
+            ],
+            "ingredients_Op": [],
+            "glass": [
+                "Copa Cocktail"
+            ],
+            "technique": [
+                "Batido"
+            ],
+            "method": "Agregar todos los ingredientes en una coctelera y batir enérgicamente durante 15 segundos. Servir en la copa cocktail y decorar.",
+            "garnish": [
+                "Rodela de limón",
+                "Twist de limón"
+            ],
+            "img": "daiqui.png"
+        },
+        {
+            "id": "g_tonic",
+            "name": "GIN TONIC",
+            "type": "All Day Cocktail",
+            "ingredients": [
+                "1 1/2 oz Gin",
+                "6 oz Tonica"
+            ],
+            "ingredients_Op": [],
+            "glass": [
+                "Copa Borgoña"
+            ],
+            "technique": [
+                "Directo al Vaso"
+            ],
+            "method": "Agregar cinco rocas de hielo y refrescar la copa con la ayuda de una cuchara de bar. Eliminar el excedente de agua con la ayuda de un colador julep. Incorporar el gin y lentamente agregar la tonica. Agregar el botánico elegido.",
+            "garnish": [
+                "A/E"
+            ],
+            "img": "g_tonic.png"
+        },
+        {
+            "id": "manhat",
+            "name": "MANHATTAN",
+            "type": "Pre Dinner - Aperitivo",
+            "ingredients": [
+                "2 oz Whiskey",
+                "1 oz Vermouth Rojo",
+                "2 Gotitas Bitter Angostura"
+            ],
+            "ingredients_Op": [],
+            "glass": [
+                "Copa Cocktail"
+            ],
+            "technique": [
+                "Refrescado",
+                "Escanciado"
+            ],
+            "method": "Agregar cuatro rocas de hielo cristalino a un vaso mezclador. Enfriar el vaso mezclador con la ayuda de una cuchara de bar. Eliminar el excedente de agua con la ayuda de un colador julep. Incorporar el Vermouth, Whiskey, Angostura bitter y refrescar durante 10 segundos girando los hielos con la cuchara de bar. Filtrar y servir en una copa cocktail muy fría. Decorar y perfumar con un twist de naranja en la superficie",
+            "garnish": [
+                "Cereza"
+            ],
+            "img": "manhat.png"
+        },
+        {
+            "id": "dry_marti",
+            "name": "DRY MARTINI",
+            "type": "Pre Dinner",
+            "ingredients": [
+                "2 oz Gin",
+                "1/3 oz Vermouth seco"
+            ],
+            "ingredients_Op": [],
+            "glass": [
+                "Copa Cocktail"
+            ],
+            "technique": [
+                "Refrescado",
+                "Escanciado"
+            ],
+            "method": "Agregar 6 rocas de hielo a un vaso mezclador, refrescar el cristal con la ayuda de una cuchara de bar. Eliminar el excedente de agua con la ayuda de un colador julep. Incorporar el Vermouth, gin y refrescar durante 20 segundos girando los hielos con la cuchara de bar. Filtrar y servir en una copa cocktail muy fría. Decorar y perfumar con un twist de limón en la superficie",
+            "garnish": [
+                "Dos o tres Aceitunas"
+            ],
+            "img": "dry_marti.png"
+        },
+        {
+            "id": "old_fash",
+            "name": "OLD FASHIONED",
+            "type": "Pre Dinner",
+            "ingredients": [
+                "2 oz Bourbon o whiskey",
+                "4 Gotitas Bitter Angostura",
+                "1 Cubo Azúcar",
+                "1 Cucharita de bar de Soda"
+            ],
+            "ingredients_Op": [],
+            "glass": [
+                "Vaso Old Fashioned"
+            ],
+            "technique": [
+                "Directo al Vaso"
+            ],
+            "method": "Triturar el azúcar y el Angostura bitters en el poco de Soda (una cucharada de bar, no más) hasta disolver el azúcar, formando un jarabe en el fondo del vaso. Agregar el whiskey y el hielo y revolver. Decorar con twist fresco de cáscara de naranja.",
+            "garnish": [
+                "Piel de naranja"
+            ],
+            "img": "old_fash.png"
+        },
+        {
+            "id": "mojito",
+            "name": "MOJITO",
+            "type": "Long Drink",
+            "ingredients": [
+                "1 1/2 oz Ron blanco",
+                "3/4 oz de Jugo de limón",
+                "3/4 oz Jarabe de goma",
+                "1 rama y 4 hojas de Hierbabuena o Menta fresca",
+                "Un dash de Soda"
+            ],
+            "ingredients_Op": [],
+            "glass": [
+                "Vaso Long Drink"
+            ],
+            "technique": [
+                "Machacado"
+            ],
+            "method": "Triturar suavemente las hojas de Menta fresca con Jarabe de goma y el jugo de limón en el fondo de un vaso alto. Agregar el ron, revolver, agregar hielo y terminar con no más de una onza de Soda.",
+            "garnish": [
+                "Una rama generosa de Menta fresca (Sobre el cocktail)"
+            ],
+            "img": "mojito.png"
+        },
+        {
+            "id": "mint_julep",
+            "name": "MINT JULEP",
+            "type": "Long Drink",
+            "ingredients": [
+                "2 1/2 oz Bourbon, whiskey o Cognac",
+                "4 ramitas de Menta fresca",
+                "1 oz Jarabe de goma"
+            ],
+            "ingredients_Op": [],
+            "glass": [
+                "Vaso Long Drink"
+            ],
+            "technique": [
+                "Machacado"
+            ],
+            "method": ": Colocar todos los ingredientes con la Menta fresca y presionarlas ligeramente con el mortero. Agregar el hielo picado. Remover con la cuchara de bar hasta que el exterior del vaso se escarche. Agregar más hielo triturado. Revolver nuevamente para escarchar el vaso. Decorar con al menos 1 ramito de Menta fresca, preferible 3",
+            "garnish": [
+                "Una rama generosa de Menta fresca (Sobre el cocktail)"
+            ],
+            "img": "mint_julep.png"
+        },
+        {
+            "id": "cynar_julep",
+            "name": "CYNAR JULEP",
+            "type": "Long drink",
+            "ingredients": [
+                "2 oz Cynar",
+                "1 oz Jugo de pomelo",
+                "1/2 Jarabe simple",
+                "1/2 Jugo de limón",
+                "4 ramitas de Menta fresca"
+            ],
+            "ingredients_Op": [],
+            "glass": [
+                "Vaso Julep",
+                "Vaso Old Fashioned"
+            ],
+            "technique": [
+                "Machacado"
+            ],
+            "method": "Colocar todos los ingredientes con la Menta fresca y presionarlas ligeramente con el mortero. Agregar el hielo picado. Remover con la cuchara de bar hasta que el exterior del vaso se escarche. Agregar más hielo triturado. Revolver nuevamente para escarchar el vaso. Decorar con al menos 1 ramito de Menta fresca, preferible 3",
+            "garnish": [
+                "Una rama generosa de Menta fresca (Sobre el cocktail)"
+            ],
+            "img": "cynar_julep.png"
+        },
+        {
+            "id": "americano",
+            "name": "AMERICANO",
+            "type": "Aperitivo",
+            "ingredients": [
+                "1 oz Campari",
+                "1 oz Vermouth Rosso",
+                "Un dash de Soda"
+            ],
+            "ingredients_Op": [],
+            "glass": [
+                "Vaso Old Fashioned"
+            ],
+            "technique": [
+                "Directo al Vaso"
+            ],
+            "method": "Mezclar los ingredientes directamente en un vaso old fashioned lleno de cubitos de hielo, agregar un dash de Soda y decorar con media rodaja de  naranja.",
+            "garnish": [
+                "Media luna de naranja"
+            ],
+            "img": "americano.png"
+        },
+        {
+            "id": "negroni",
+            "name": "NEGRONI",
+            "type": "Aperitivo",
+            "ingredients": [
+                "1 oz Gin",
+                "1 oz Campari",
+                "1 oz Vermouth Rosso"
+            ],
+            "ingredients_Op": [],
+            "glass": [
+                "Vaso Old Fashioned"
+            ],
+            "technique": [
+                "Directo al Vaso",
+                "Refrescado",
+                "Escanciado"
+            ],
+            "method": "Vierta todos los ingredientes directamente en vaso old fashioned lleno de hielo. Revuelva suavemente y luego perfume la superficie con un twist de naranja y Decore.",
+            "garnish": [
+                "Media luna de naranja"
+            ],
+            "img": "negroni.png"
+        },
+        {
+            "id": "spritz",
+            "name": "SPRITZ",
+            "type": "Sparkling Cocktail",
+            "ingredients": [
+                "2 oz Prosecco",
+                "2 oz Aperol",
+                "1 oz Soda"
+            ],
+            "ingredients_Op": [],
+            "glass": [
+                "Copa Borgoña"
+            ],
+            "technique": [
+                "Directo al Vaso"
+            ],
+            "method": " Incorporar el Prosecco y Aperol en una copa Borgoña llena de hielo. Cubra con un chorrito de Soda. Decore.",
+            "garnish": [
+                "Media luna de naranja"
+            ],
+            "img": "spritz.png"
+        },
+        {
+            "id": "margarita",
+            "name": "MARGARITA",
+            "type": "Aperitivo",
+            "ingredients": [
+                "2 oz Tequila Silver",
+                "1 oz Triple sec",
+                "3/4 oz Jugo de limón"
+            ],
+            "ingredients_Op": [
+                "1/2 oz de Jarabe de goma"
+            ],
+            "glass": [
+                "Copa Margarita"
+            ],
+            "technique": [
+                "Batido",
+                "Licuado (Frozzen)"
+            ],
+            "method": "Agregar todos los ingredientes en una coctelera y batir enérgicamente durante 15 segundos. Servir en la copa margarita, corona con sal en el borde.",
+            "garnish": [
+                "Escarcheado de sal"
+            ],
+            "img": "margarita.png"
+        },
+        {
+            "id": "caipirinha",
+            "name": "CAIPIRINHA",
+            "type": "All Day Cocktail",
+            "ingredients": [
+                "2 oz Cachaça",
+                "3/4 oz Jarabe simple",
+                "1/2 Limón fresco cortado en cuartos"
+            ],
+            "ingredients_Op": [
+                "1/2 oz de Jarabe de goma"
+            ],
+            "glass": [
+                "Vaso Old Fashioned"
+            ],
+            "technique": [
+                "Machacado"
+            ],
+            "method": "Coloque el limón y la azúcar en el vaso y machaque con un mortero. Llenar el vaso con hielo y completar con la medida de cachaça",
+            "garnish": [
+                "Rodela de limón",
+                "Drop de limón"
+            ],
+            "img": "caipirinha.png"
+        },
+        {
+            "id": "bloody_mary",
+            "name": "BLOODY MARY",
+            "type": "Long drink",
+            "ingredients": [
+                "1 1/2 oz Vodka",
+                "4 oz Jugo de tomate",
+                "1/4 oz Jugo de limón",
+                "4 Pizcas Tabasco",
+                "2 Pizcas Salsa inglesa",
+                "1 Pizca Sal"
+            ],
+            "ingredients_Op": [
+                "1/2 oz de Jarabe de goma"
+            ],
+            "glass": [
+                "Vaso Long Drink"
+            ],
+            "technique": [
+                "Refrescado",
+                "Escanciado"
+            ],
+            "method": "Revuelva suavemente, verter todos los ingredientes en un vaso alto. Adorne con el apio y la cuña de limón (opcional).",
+            "garnish": [
+                "Baston de apio",
+                "Drop de limón"
+            ],
+            "img": "bloody_mary.png"
+        },
+        {
+            "id": "alexander",
+            "name": "ALEXANDER",
+            "type": "Digestivo",
+            "ingredients": [
+                "1 oz Cognac",
+                "1 oz Licor crema de cacao",
+                "1 oz Crema de leche"
+            ],
+            "ingredients_Op": [],
+            "glass": [
+                "Copa Cocktail"
+            ],
+            "technique": [
+                "Batido"
+            ],
+            "method": "Agregar todos los ingredientes en una coctelera y batir enérgicamente durante 15 segundos. Servir en copa cocktail fría.",
+            "garnish": [
+                "Canela en Polvo"
+            ],
+            "img": "alexander.png"
+        },
+        {
+            "id": "ruso_blanco",
+            "name": "RUSO BLANCO",
+            "type": "Digestivo",
+            "ingredients": [
+                "2 oz Vodka",
+                "1 oz Licor de café",
+                "1 oz Crema de leche"
+            ],
+            "ingredients_Op": [],
+            "glass": [
+                "Vaso Old Fashioned"
+            ],
+            "technique": [
+                "Batido"
+            ],
+            "method": "En un vaso corto agregar 3 cubos de hielo y agregar el licor de café directo al vaso. El vodka y la crema de leche se debe batir enérgicamente en una coctelera durante 15 segundos para luego servir sobre los hielos del vaso",
+            "garnish": ["N/A"],
+            "img": "ruso_blanco.png"
+        },
+        {
+            "id": "rusty_nail",
+            "name": "RUSTY NAIL",
+            "type": "Digestivo",
+            "ingredients": [
+                "1 1/2 oz Whisky escocés",
+                "1 oz Drambuie"
+            ],
+            "ingredients_Op": [],
+            "glass": [
+                "Vaso Old Fashioned"
+            ],
+            "technique": [
+                "Directo al Vaso"
+            ],
+            "method": "En un vaso corto agregar 3 a 4 rocas de hielo y agregar los ingredientes. Revolver para enfriar y servir",
+            "garnish": [
+                "Twist de limón"
+            ],
+            "img": "rusty_nail.png"
+        },
+        {
+            "id": "hanky_panky",
+            "name": "HANKY PANKY",
+            "type": "Aperitivo",
+            "ingredients": [
+                "1 1/2 oz Gin",
+                "1 1/2 oz Vermouth Rosso",
+                "1 cuchara de bar de Fernet"
+            ],
+            "ingredients_Op": [],
+            "glass": [
+                "Copa Cocktail"
+            ],
+            "technique": [
+                "Refrescado",
+                "Escanciado"
+            ],
+            "method": "Agregar cuatro rocas de hielo a un vaso mezclador, refrescar el cristal con la ayuda de una cuchara de bar. Eliminar el excedente de agua con la ayuda de un colador julep. Incorporar todos los ingredientes y refrescar durante 10 segundos girando los hielos con la cuchara de bar. Filtrar y servir en una copa cocktail muy fría. Decorar y perfumar con un twist de naranja en la superficie",
+            "garnish": [
+                "Twist de naranja"
+            ],
+            "img": "hanky_panky.png"
+        },
+        {
+            "id": "godfather",
+            "name": "GODFATHER",
+            "type": "Digestivo",
+            "ingredients": [
+                "1 oz Whisky escocés",
+                "1 oz Amaretto"
+            ],
+            "ingredients_Op": [],
+            "glass": [
+                "Vaso Corto"
+            ],
+            "technique": [
+                "Directo al Vaso"
+            ],
+            "method": "En un vaso corto agregar 3 a 4 rocas de hielo y agregar los ingredientes. Revolver y servir.",
+            "garnish": [
+                "Twist de naranja"
+            ],
+            "img": "godfather.png"
+        },
+        {
+            "id": "espresso_martini",
+            "name": "ESPRESSO MARTINI",
+            "type": "After Dinner",
+            "ingredients": [
+                "1 1/2 oz Vodka",
+                "1/2 oz Jarabe de goma",
+                "1/2 oz Licor de café",
+                "1 oz Café Espresso"
+            ],
+            "ingredients_Op": [],
+            "glass": [
+                "Copa Cocktail"
+            ],
+            "technique": [
+                "Batido"
+            ],
+            "method": "Agregue todos los ingredientes en una coctelera con hielo y agite enérgicamente durante 15 segundos. Servir con doble colado en una copa cocktail muy fría.",
+            "garnish": [
+                "3 granos de café"
+            ],
+            "img": "espresso_martini.png"
+        },
+        {
+            "id": "penicillin",
+            "name": "PENICILLIN",
+            "type": "All DayCocktail",
+            "ingredients": [
+                "1 1/2 oz Blended Scotch Whisky",
+                "2/3 oz Jugo de limón",
+                "2/3 oz Syrup de Jengibre",
+                "1/3 oz Whisky Ahumado",
+                "1 Cucharita de bar de Albumina"
+            ],
+            "ingredients_Op": [],
+            "glass": [
+                "Vaso Old Fashioned"
+            ],
+            "technique": [
+                "Batido"
+            ],
+            "method": "Agregar todos los ingredientes en una coctelera y batir enérgicamente durante 15 segundos. Servir en un vaso con mucho hielo o un trozo de hielo cristalino",
+            "garnish": [
+                "Trocito de jengibre fresco"
+            ],
+            "img": "penicillin.png"
+        },
+        {
+            "id": "moscow_mule",
+            "name": "MOSCOW MULE",
+            "type": "Long drink",
+            "ingredients": [
+                "1 1/2 oz Vodka",
+                "4 oz Ginger Beer",
+                "1/3 oz Jugo de limón",
+                "1 rodela de limón"
+            ],
+            "ingredients_Op": [],
+            "glass": [
+                "Vaso Old Fashioned",
+                "Mug"
+            ],
+            "technique": [
+                "Directo al Vaso"
+            ],
+            "method": "Agregar todos los ingredientes en el vaso con mucho hielo roca luego la ginger beer lentamente, y colocar dentro del vaso la rodela de limón",
+            "garnish": [
+                "Rodela de limón"
+            ],
+            "img": "moscow_mule.png"
+        },
+        {
+            "id": "tom_collins",
+            "name": "TOM COLLINS",
+            "type": "All Day Cocktail",
+            "ingredients": [
+                "1 1/2 oz Gin",
+                "1 oz Jugo de limón",
+                "1/2 oz Jarabe de goma",
+                "1 dash de Soda"
+            ],
+            "ingredients_Op": [],
+            "glass": [
+                "Vaso Alto"
+            ],
+            "technique": [
+                "Directo al Vaso"
+            ],
+            "method": "Agregar todos los ingredientes directamente en el vaso alto, revolver y rellenar con hielo en cubos. Decorar",
+            "garnish": [
+                "Una cereza",
+                "Media luna de limón"
+            ],
+            "img": "tom_collins.png"
+        },
+        {
+            "id": "vaina_chilena",
+            "name": "VAINA CHILENA",
+            "type": "After Dinner",
+            "ingredients": [
+                "1 oz Tres Palos (Coñac)",
+                "1 oz Oporto",
+                "1 oz Licor crema de cacao",
+                "1/2 Yema de huevo",
+                "1 Cucharita de bar de Jarabe de goma"
+            ],
+            "ingredients_Op": [],
+            "glass": [
+                "Copa champañera"
+            ],
+            "technique": [
+                "Batido"
+            ],
+            "method": "Agregar todos los ingredientes en una licuadora o una coctelera para fusionar los ingredientes. Servir en una copa y decorar con una pisca canela en la superficie.",
+            "garnish": [
+                "Pizca de canela molida"
+            ],
+            "img": "vaina_chilena.png"
+        },
+        {
+            "id": "rompe_olas",
+            "name": "ROMPE OLAS",
+            "type": "All Day Cocktail",
+            "ingredients": [
+                "2 oz Pisco Transparente",
+                "2 oz Jugo de piña",
+                "1/2 oz Campari",
+                "1/2 oz Jugo de limón",
+                "1/2 oz Jarabe de goma"
+            ],
+            "ingredients_Op": [
+                "1 Cucharita de bar de Albumina"
+            ],
+            "glass": [
+                "Copa Flauta"
+            ],
+            "technique": [
+                "Batido"
+            ],
+            "method": "Agregar todos los ingredientes en una coctelera y batir enérgicamente durante 15 segundos. Servir en una copa cocktail muy fría y decorar",
+            "garnish": [
+                "Ramita de romero"
+            ],
+            "img": "rompe_olas.png"
+        },
+        {
+            "id": "chilean_sidecar",
+            "name": "CHILEAN SIDECAR",
+            "type": "All Day Cocktail",
+            "ingredients": [
+                "1 1/2 oz Pisco Chileno Añejado",
+                "3/4 oz Triple Sec",
+                "1/2 oz Jugo de limón"
+            ],
+            "ingredients_Op": [],
+            "glass": [
+                "Copa Cocktail"
+            ],
+            "technique": [
+                "Batido"
+            ],
+            "method": "Añadir todos los ingredientes en la coctelera batir 15 segundos, servir en copa cocktail bien fría, decorar crusta de azúcar.",
+            "garnish": [
+                "Zest de naranja"
+            ],
+            "img": "chilean_sidecar.png"
+        },
+        {
+            "id": "cosmopolitan",
+            "name": "COSMOPOLITAN",
+            "type": "All Day Cocktail",
+            "ingredients": [
+                "1 1/2 oz Vodka",
+                "3/4 oz Cointreau",
+                "1/4 oz Jugo de limón",
+                "1 oz Jugo de Cranberry"
+            ],
+            "ingredients_Op": [],
+            "glass": [
+                "Copa Cocktail"
+            ],
+            "technique": [
+                "Batido"
+            ],
+            "method": "Agregar todos los ingredientes en una coctelera y batir enérgicamente durante 15 segundos. Servir con doble colado en una copa cocktail fría y agregar un twist de naranja dentro del cocktail.",
+            "garnish": [
+                "Twist de naranja"
+            ],
+            "img": "cosmopolitan.png"
+        },
+        {
+            "id": "bramble",
+            "name": "BRAMBLE",
+            "type": "All Day Cocktail",
+            "ingredients": [
+                "1 1/2 oz Gin",
+                "1/3 oz Jarabe de goma",
+                "1/2 oz Jugo de limón",
+                "1/2 oz Syrup de Mora/Chambord"
+            ],
+            "ingredients_Op": [],
+            "glass": [
+                "Vaso Old Fashioned"
+            ],
+            "technique": [
+                "Batido"
+            ],
+            "method": "En un vaso corto agregar la medida de syrup de mora o chambord y completar con hielo frappe. Agregar el resto de los ingredientes en una coctelera y batir enérgicamente durante 15 segundos. Servir sobre el hielo picado y decorar.",
+            "garnish": [
+                "Media luna de limón",
+                "Moras"
+            ],
+            "img": "bramble.png"
+        },
+        {
+            "id": "gimlet",
+            "name": "GIMLET",
+            "type": "Pre dinner",
+            "ingredients": [
+                "2 oz Gin",
+                "1 oz Jugo de limón",
+                "1/2 oz Jarabe de goma"
+            ],
+            "ingredients_Op": [],
+            "glass": [
+                "Copa Cocktail"
+            ],
+            "technique": [
+                "Batido"
+            ],
+            "method": "Agregar todos los ingredientes en una coctelera y batir enérgicamente durante 15 segundos. Servir con doble colado en una copa cocktail fría y agregar un twist de limón dentro del cocktail.",
+            "garnish": [
+                "Twist de limón"
+            ],
+            "img": "gimlet.png"
+        },
+        {
+            "id": "mai_tai",
+            "name": "MAI TAI",
+            "type": "Long Drink",
+            "ingredients": [
+                "2 oz Ron añejo",
+                "3/4 oz Jugo de limón",
+                "3/4 oz Triple Sec",
+                "1 Cucharita de bar Horchata"
+            ],
+            "ingredients_Op": [],
+            "glass": [
+                "Vaso Old Fashioned"
+            ],
+            "technique": [
+                "Batido"
+            ],
+            "method": "Agregar todos los ingredientes en una coctelera y batir enérgicamente durante 15 segundos. Servir con doble colado en un vaso corto lleno de hielo frappe y decorar.",
+            "garnish": [
+                "Rodela de limón",
+                "Ramito de Menta fresca"
+            ],
+            "img": "mai_tai.png"
+        },
+        {
+            "id": "pina_colada",
+            "name": "PIÑA COLADA",
+            "type": "Long Drink",
+            "ingredients": [
+                "1 oz Ron blanco",
+                "3 oz Jugo de piña",
+                "1 oz Crema de coco"
+            ],
+            "ingredients_Op": [],
+            "glass": [
+                "Copa fantasía",
+                "Copa Cocktail"
+            ],
+            "technique": [
+                "Batido",
+                "Licuado"
+            ],
+            "method": "Agregar todos los ingredientes en una coctelera con hielo batir enérgicamente durante 15 segundos y servir (doble colado para que no se filtre el hielo) en una copa cocktail.",
+            "garnish": [
+                "Piña"
+            ],
+            "img": "pina_colada.png"
+        },
+        {
+            "id": "clover_club",
+            "name": "CLOVER CLUB",
+            "type": "All day cocktail",
+            "ingredients": [
+                "1 oz Gin",
+                "1 oz Vermouth seco",
+                "1/2 oz Jugo de limón",
+                "2 Cucharitas de Syrup de frambuesa",
+                "2 Cucharitas de Albumina"
+            ],
+            "ingredients_Op": [],
+            "glass": [
+                "Copa Cocktail"
+            ],
+            "technique": [
+                "Batido"
+            ],
+            "method": "Agregar todos los ingredientes en una coctelera y batir enérgicamente durante 15 segundos. Servir con doble colado en una copa cocktail fría y agregar un twist de limón dentro del cocktail.",
+            "garnish": [
+                "Twist de limón"
+            ],
+            "img": "clover_club.png"
+        },
+        {
+            "id": "french_75",
+            "name": "FRENCH 75",
+            "type": "Sparkling cocktail",
+            "ingredients": [
+                "1 oz Gin",
+                "1/2 oz Jugo de limón ",
+                "1/2 oz Jarabe de goma",
+                "2 oz Prosseco"
+            ],
+            "ingredients_Op": [],
+            "glass": [
+                "Copa Cocktail"
+            ],
+            "technique": [
+                "Batido"
+            ],
+            "method": "Vierta todos los ingredientes, excepto el prosseco, en una coctelera. Batir enérgicamente durante 15 segundos y sirva en una copa cocktail fría. Agregue el prosseco y decore.",
+            "garnish": [
+                "Twist de limón"
+            ],
+            "img": "french_75.png"
+        },
+        {
+            "id": "kir_royal",
+            "name": "KIR ROYAL",
+            "type": "Before dinner Cocktail",
+            "ingredients": [
+                "3 oz Espumante",
+                "1/3 oz Licor Crema de cassis"
+            ],
+            "ingredients_Op": [],
+            "glass": [
+                "Copa flauta"
+            ],
+            "technique": [
+                "Directo al Vaso"
+            ],
+            "method": "Agregue la crema de cassis en la copa y agregue encima el espumante. Revolver y servir.",
+            "garnish": ["N/A"],
+            "img": "kir_royal.png"
+        },
+        {
+            "id": "sangria",
+            "name": "SANGRIA",
+            "type": "All day cocktail",
+            "ingredients": [
+                "4 oz Vino Tinto",
+                "1 oz Pisco",
+                "1 oz Jugo de naranja",
+                "2 Cucharitas de bar de Syrup simple"
+            ],
+            "ingredients_Op": [],
+            "glass": [
+                "Copa Borgoña"
+            ],
+            "technique": [
+                "Directo al Vaso"
+            ],
+            "method": "En una copa borgoña colocar hielo, la fruta y todos los ingredientes. Revolver y servir.",
+            "garnish": [
+                "Cubitos de manzana",
+                "Media luna de naranja",
+                "Media luna de limón",
+                "Fruta de estación en laminas",
+                "Ramillete de hierba aromática"
+            ],
+            "img": "sangria.png"
+        }
+    ],
+    "medidas": [
+        "1 Cucharita de bar de",
+        "2 Cucharitas de bar de",
+        "1 Gotita",
+        "2 Gotitas",
+        "3 Gotitas",
+        "4 Gotitas",
+        "1 Pizca",
+        "2 Pizcas",
+        "3 Pizcas",
+        "4 Pizcas",
+        "1 rama y 4 hojas de",
+        "2 ramitas de",
+        "3 ramitas de",
+        "4 ramitas de",
+        "1/4 oz",
+        "1/2 oz",
+        "3/4 oz",
+        "1 oz",
+        "1 1/4 oz",
+        "1 1/2 oz",
+        "1 3/4 oz",
+        "2 oz",
+        "2 1/4 oz",
+        "2 1/2 oz",
+        "2 3/4 oz",
+        "3 oz",
+        "3 1/4 oz",
+        "3 1/2 oz",
+        "3 3/4 oz",
+        "4 oz",
+        "4 1/4 oz",
+        "4 1/2 oz",
+        "4 3/4 oz",
+        "5 oz",
+        "5 1/4 oz",
+        "5 1/2 oz",
+        "5 3/4 oz",
+        "6 oz",
+        "6 1/4 oz",
+        "6 1/2 oz",
+        "6 3/4 oz",
+        "Un dash de "
+    ],
+    "bases": [
+        "Amaretto",
+        "Aperol",
+        "Blended Scotch Whisky",
+        "Bourbon o whiskey",
+        "Bourbon, whiskey o Cognac",
+        "Cachaça",
+        "Campari",
+        "Cognac",
+        "Cynar",
+        "Drambuie",
+        "Espumante",
+        "Gin",
+        "Licor Crema de cassis",
+        "Licor crema de cacao",
+        "Licor de café",
+        "Oporto",
+        "Pisco Chileno Añejado",
+        "Pisco Transparente",
+        "Pisco",
+        "Ron añejo",
+        "Ron blanco",
+        "Tequila Silver",
+        "Tres Palos (Coñac)",
+        "Tres Palos (Coñac)",
+        "Triple sec",
+        "Vino Tinto",
+        "Vodka",
+        "Vodka",
+        "Whiskey",
+        "Whisky Ahumado",
+        "Whisky escocés"
+
+    ],
+    "mixers": [
+        "Agua",
+        "Crema de coco",
+        "Cubo Azúcar",
+        "Ginger Beer",
+        "Horchata",
+        "Prosecco",
+        "Soda",
+        "Tonica"
+    ],
+    "modificadores": [
+        "1 rodela de limón",
+        "1/2 Yema de huevo",
+        "Albumina",
+        "Café Espresso",
+        "Crema de leche",
+        "Cubo Azúcar",
+        "Fernet",
+        "Jarabe de goma",
+        "Jarabe simple",
+        "Jugo de limón",
+        "Jugo de naranja",
+        "Jugo de piña",
+        "Jugo de pomelo",
+        "Jugo de tomate",
+        "Limón fresco cortado en cuartos",
+        "Syrup de Jengibre",
+        "Syrup de Mora/Chambord",
+        "Syrup de frambuesa",
+        "Syrup simple",
+        "Vermouth Rojo",
+        "Vermouth Rosso",
+        "Vermouth seco"
+    ],
+    "aditivos": [
+        "Albumina",
+        "Bitter Angostura",
+        "Hierbabuena o Menta fresca",
+        "Menta fresca",
+        "Ramitas de Menta fresca",
+        "Sal",
+        "Salsa inglesa",
+        "Tabasco"
+    ],
+    "preparaciones": [
+        "Batido",
+        "Directo al Vaso",
+        "Escanciado",
+        "Licuado (Frozzen)",
+        "Licuado",
+        "Machacado",
+        "Refrescado"
+    ],
+    "cristalerias": [
+        "Copa Borgoña",
+        "Copa Cocktail",
+        "Copa Flauta",
+        "Copa Margarita",
+        "Copa champañera",
+        "Copa fantasía",
+        "Mug",
+        "Vaso Alto",
+        "Vaso Corto",
+        "Vaso Julep",
+        "Vaso Long Drink",
+        "Vaso Old Fashioned",
+        "Vaso Rock"
+    ],
+    "garnish": [
+        "3 granos de café",
+        "A/E",
+        "Aceitunas",
+        "Baston de apio",
+        "Canela en Polvo",
+        "Cereza",
+        "Cubitos de manzana",
+        "Dos o tres Aceitunas",
+        "Drop de limón",
+        "Escarcheado de sal",
+        "Fruta de estación en laminas",
+        "Media luna de limón",
+        "Media luna de naranja",
+        "Moras",
+        "N/A",
+        "Piel de naranja",
+        "Pizca de canela molida",
+        "Piña",
+        "Ramillete de hierba aromática",
+        "Ramita de romero",
+        "Ramito de Menta fresca",
+        "Rodela de limón",
+        "Trocito de jengibre fresco",
+        "Twist de limón",
+        "Twist de naranja",
+        "Una cereza",
+        "Una rama generosa de Menta fresca (Sobre el cocktail)",
+        "Zest de naranja"
+    ]
+}
